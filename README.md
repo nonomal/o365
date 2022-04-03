@@ -7,6 +7,6 @@ https://hostloc.com/thread-846732-1-1.html
 # 站库分离版  
 需要有一定的动手能力
 启动方式同一般的jar包，仅仅需要修改application.properties下面三个参数为你自己的mysql 数据库的参数，让后将此文件放置到jar同级目录即可  
-spring.datasource.url=jdbc:mysql://localhost/o365  
-spring.datasource.username=root  
-spring.datasource.password=12345678  
+spring.datasource.url=jdbc:mysql://eukzi0e7m9xn.ap-northeast-2.psdb.cloud/o365?sslMode=VERIFY_IDENTITY
+spring.datasource.username=8v7sovdyxhcu
+spring.datasource.password=pscale_pw_8sPW-uHvivvRslgX2JiNQvCvRmkdJJlx31N95Mljr_A
