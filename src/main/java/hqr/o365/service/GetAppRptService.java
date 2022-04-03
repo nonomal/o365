@@ -21,7 +21,7 @@ public class GetAppRptService {
 		long total = tar.count();
 		List<TaAppRpt> rows = new ArrayList<TaAppRpt>();
 		if(total>0) {
-			rows = tar.getSysRpt(intRows * (intPage - 1), intRows * intPage );
+			rows = tar.getSysRpt(intRows * (intPage - 1), intRows );
 		}
 		
 		HashMap map = new HashMap();

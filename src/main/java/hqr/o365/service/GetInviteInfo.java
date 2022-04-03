@@ -28,7 +28,7 @@ public class GetInviteInfo {
 		long total = repo.count();
 		List<TaInviteInfo> rows = new ArrayList<TaInviteInfo>();
 		if(total>0) {
-			rows = repo.getInviteInfos(intRows * (intPage - 1), intRows * intPage );
+			rows = repo.getInviteInfos(intRows * (intPage - 1), intRows );
 		}
 		
 		HashMap map = new HashMap();

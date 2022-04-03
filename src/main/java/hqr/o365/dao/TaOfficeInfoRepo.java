@@ -13,9 +13,8 @@ import hqr.o365.domain.TaOfficeInfo;
 @Repository
 public interface TaOfficeInfoRepo extends JpaRepository<TaOfficeInfo, Integer> {
 	
-	@Query(value="select seq_no,app_id,mask_app_id,create_dt,last_update_dt,last_update_id,passwd,remarks,secret_id,mask_secret_id,tenant_id,user_id,selected "
-			+ "from (select A.*, rownum ro from (select * from ta_office_info order by remarks) A  where rownum<= :endRow ) where ro>:startRow ", nativeQuery = true)
-	List<TaOfficeInfo> getOfficeInfos(int startRow, int endRow);
+	@Query(value="select * from ta_office_info order by remarks LIMIT :offset,:pageSize ", nativeQuery = true)
+	List<TaOfficeInfo> getOfficeInfos(int offset, int pageSize);
 	
 	@Transactional
     @Modifying

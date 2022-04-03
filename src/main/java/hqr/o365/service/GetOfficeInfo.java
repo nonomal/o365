@@ -28,7 +28,7 @@ public class GetOfficeInfo {
 		long total = repo.count();
 		List<TaOfficeInfo> rows = new ArrayList<TaOfficeInfo>();
 		if(total>0) {
-			rows = repo.getOfficeInfos(intRows * (intPage - 1), intRows * intPage );
+			rows = repo.getOfficeInfos(intRows * (intPage - 1), intRows );
 		}
 		
 		HashMap map = new HashMap();
