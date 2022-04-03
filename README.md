@@ -4,14 +4,9 @@ O365管理系统是一个以java语言开发的基于Microsoft Graph Restful API
 一般示例请参考
 https://hostloc.com/thread-846732-1-1.html
 
-
-# Docker 
-基于v1.2.0版的docker
-```bash
-docker pull vanyouseea/o365
-docker run -d -p 9527:9527 vanyouseea/o365
-
-#如果你之前使用过，但是不想手动迁移数据，那么可以这样做，/root/o365/data是你本地的文件夹
-#建议使用这种方法，以后你如果想要迁移数据，直接拷贝/root/o365/data文件就行了
-docker run -d -p 9527:9527 -v /root/o365/data:/data vanyouseea/o365
-```
+# 站库分离版  
+需要有一定的动手能力
+启动方式同一般的jar包，仅仅需要修改application.properties下面三个参数为你自己的mysql 数据库的参数，让后将此文件放置到jar同级目录即可  
+spring.datasource.url=jdbc:mysql://localhost/o365  
+spring.datasource.username=root  
+spring.datasource.password=12345678  
